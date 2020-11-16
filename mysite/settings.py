@@ -77,6 +77,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+    }, 
+    'postgre': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bills_site_db',
         'USER': 'bill',
