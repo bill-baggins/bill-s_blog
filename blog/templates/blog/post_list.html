@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Post List</title>
+</head>
+<body>
+    <div class="post_list-main-header">
+        <h1>Welcome to Bill's Blog!</h1>
+    </div>
+
+    <div class="post_list-main-body">
+        <p>Most recent posts:</p>
+        <ul>
+        {% for content in post_links %}
+            <li><a href="#">{{ content.0 }}</a><br>Published:{{ content.1 }}<br></li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <!-- <div class="post_list-main-body">
+        <p>Most Recent Posts:</p>
+        <ul>
+            <li><a href="#">Hammurabi's Code</a></li>
+            <li><a href="#">Saturn's Moon Titan</a></li>
+            <li><a href="#">What Is Nuclear Physics?</a></li>
+        </ul>
+    </div> -->
+
+    <div class="post_list-main-footer">
+        <p>Bill Baggins Copyright 2020</p>
+        <p>Note: do not steal or else you will get nipped by the great duck</p>
+    </div>
+</body>
+</html>

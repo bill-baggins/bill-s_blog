@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'db.sqlite3',
     }, 
-    'postgre': {
+    'postgres': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bills_site_db',
         'USER': 'bill',
@@ -128,4 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIR = (
+    BASE_DIR / 'static',
+)
+
 STATIC_ROOT = BASE_DIR / 'static'
