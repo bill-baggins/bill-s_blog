@@ -1,37 +1,37 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
     <title>Post List</title>
 </head>
 <body>
-    <div class="post_list-main-header">
+    <div class="header">
         <h1>Welcome to Bill's Blog!</h1>
+        <hr>
     </div>
 
-    <div class="post_list-main-body">
+    <div class="body">
         <p>Most recent posts:</p>
-        <ul>
         {% for content in post_links %}
-            <li><a href="#">{{ content.0 }}</a><br>Published:{{ content.1 }}<br></li>
+            <p><br><a href="#">{{ content.0 }}</a><br>Published:{{ content.1 }}<br></p>
         {% endfor %}
-        </ul>
     </div>
 
-    <!-- <div class="post_list-main-body">
-        <p>Most Recent Posts:</p>
-        <ul>
-            <li><a href="#">Hammurabi's Code</a></li>
-            <li><a href="#">Saturn's Moon Titan</a></li>
-            <li><a href="#">What Is Nuclear Physics?</a></li>
-        </ul>
-    </div> -->
-
-    <div class="post_list-main-footer">
+    <div class="footer">
         <p>Bill Baggins Copyright 2020</p>
         <p>Note: do not steal or else you will get nipped by the great duck</p>
+    </div>
+
+    <div class="stupid-shit">
+        <form action="{% static js/post_list.js %}">
+            <label for="fib">Type in a number.</label>
+            <input type="number" id="fib">
+        </form>
     </div>
 </body>
 </html>
